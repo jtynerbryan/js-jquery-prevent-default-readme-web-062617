@@ -1,7 +1,8 @@
 $(document).ready(function(){
   
   // browser refreshes on submit
-  $('form').on('submit', function(){
+  $('form').on('submit', function(e){
+    e.preventDefault();
     var name = $('#name').val();
     $("#hello").text("Hello, " + name);
   });
